@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическая работа №1</title>
+</head>
+<body>
+    <div id="page1" class="page active">
+        <p align="center">Практическая работа №1</p>
+        <h1>Я - Арасланов Василий, студент группы 24П-1. Учусь на программиста по специальности Информационные системы и программирование</h1>
+        <img src="photo.jpg" alt="Фото студента" width="250">
+        <h2><i><u>Мой электронный почтовый адрес - <b>vasilijaraslanov5@gmail.com</b></u></i></h2>
+        <p><button><a href="https://slobkoll.ru/" target="_blank">Ссылка на сайт</a></button></p>
+        <p><b>Колледж в который я хожу, называется</b> - <i><u>Слободской колледж педагогики и социальных отношений</u></i></p>
+        <p><i>Чем я увлекаюсь:
+            <ul>
+                <li>Шахматы</li>
+                <li>Видеоигры</li>
+            </ul>
+        </i></p>
+        <h3>Информация обо мне:
+            <ol>
+                <li><u>Недавно выиграл грант и реализую его.</u></li>
+                <li><i>В начале августа (8 числа) проводил турнир по шахматам ко дню физкультурника.</i></li>
+            </ol>
+        </h3>
+    </div>
+
+    <div id="page2" class="page">
+        <h3>Задание 2</h3>
+        <table border="1" cellspacing="0" cellpadding="10" width="500">
+            <tr><td colspan="5">&nbsp;</td></tr>
+            <tr>
+                <td rowspan="2">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td rowspan="2">&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4" rowspan="2">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr><td>&nbsp;</td></tr>
+        </table>
+
+        <br><br>
+
+        <h3>Задание 3</h3>
+        <table border="1" cellspacing="0" cellpadding="8" width="400" height="400" align="center">
+            <tr><td colspan="8">&nbsp;</td></tr>
+            <tr>
+                <td rowspan="6">&nbsp;</td>
+                <td colspan="6">&nbsp;</td>
+                <td rowspan="7">&nbsp;</td>
+            </tr>
+            <tr>
+                <td rowspan="4">&nbsp;</td>
+                <td colspan="4">&nbsp;</td>
+                <td rowspan="5">&nbsp;</td>
+            </tr>
+            <tr>
+                <td rowspan="2">&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
+                <td rowspan="3">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr><td colspan="3">&nbsp;</td></tr>
+            <tr><td colspan="5">&nbsp;</td></tr>
+            <tr><td colspan="7">&nbsp;</td></tr>
+        </table>
+
+        <br><br>
+
+        <h3>Задание 4</h3>
+        <table border="1" cellspacing="0" cellpadding="6" width="300" height="300" align="center">
+            <tr><td colspan="6" bgcolor="#00FFFF">&nbsp;</td></tr>
+            <tr><td colspan="6" bgcolor="#00FFFF">&nbsp;</td></tr>
+            <tr>
+                <td rowspan="6" bgcolor="#FFFFCC">&nbsp;</td>
+                <td colspan="4" bgcolor="#00FFFF">&nbsp;</td>
+                <td rowspan="6" bgcolor="#FFFFCC">&nbsp;</td>
+            </tr>
+            <tr>
+                <td rowspan="3" bgcolor="#FFFFCC">&nbsp;</td>
+                <td bgcolor="red" width="30" height="30">&nbsp;</td>
+                <td bgcolor="blue" width="30" height="30">&nbsp;</td>
+                <td rowspan="3" bgcolor="#FFFFCC">&nbsp;</td>
+            </tr>
+            <tr>
+                <td bgcolor="lime" width="30" height="30">&nbsp;</td>
+                <td bgcolor="yellow" width="30" height="30">&nbsp;</td>
+            </tr>
+            <tr><td colspan="2" bgcolor="#00FFFF">&nbsp;</td></tr>
+            <tr><td colspan="4" bgcolor="#00FFFF">&nbsp;</td></tr>
+            <tr><td colspan="6" bgcolor="#00FFFF">&nbsp;</td></tr>
+        </table>
+    </div>
+
+    <div id="page3" class="page">
+        <h1>АНКЕТА</h1>
+        <form id="surveyForm">
+            <div class="form-group">
+                <label for="name">Ваше имя:</label><br>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Ваш пол:</label><br>
+                <label><input type="radio" name="gender" value="женский"> женский</label>
+                <label><input type="radio" name="gender" value="мужской"> мужской</label>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="course">На каком курсе вы учитесь?</label><br>
+                <select id="course" name="course">
+                    <option value="первый">первый</option>
+                    <option value="второй">второй</option>
+                    <option value="третий">третий</option>
+                    <option value="четвертый">четвертый</option>
+                    <option value="пятый">пятый</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Какие языки программирования вы знаете?</label><br>
+                <label><input type="checkbox" name="lang" value="Паскаль"> Паскаль</label><br>
+                <label><input type="checkbox" name="lang" value="СИ"> СИ</label><br>
+                <label><input type="checkbox" name="lang" value="Ассемблер"> Ассемблер</label>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="about">Напишите несколько слов о себе:</label><br>
+                <textarea id="about" name="about" rows="4" cols="40"></textarea>
+            </div>
+            <br>
+            <div class="buttons">
+                <button type="submit">Отправка данных</button>
+                <button type="reset">Сброс значений полей</button>
+            </div>
+        </form>
+
+        <div id="result" style="margin-top: 20px; display: none;">
+            <h3>Данные успешно отправлены:</h3>
+            <div id="resultContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
