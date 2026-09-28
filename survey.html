@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическая работа №1 — Анкета</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="tables.html">Таблицы</a>
+        <a href="survey.html">Анкета</a>
+    </nav>
+
+    <div class="page">
+        <h1>АНКЕТА</h1>
+        <form id="surveyForm">
+            <div class="form-group">
+                <label for="name">Ваше имя:</label><br>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Ваш пол:</label><br>
+                <label><input type="radio" name="gender" value="женский"> женский</label>
+                <label><input type="radio" name="gender" value="мужской"> мужской</label>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="course">На каком курсе вы учитесь?</label><br>
+                <select id="course" name="course">
+                    <option value="первый">первый</option>
+                    <option value="второй">второй</option>
+                    <option value="третий">третий</option>
+                    <option value="четвертый">четвертый</option>
+                    <option value="пятый">пятый</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Какие языки программирования вы знаете?</label><br>
+                <label><input type="checkbox" name="lang" value="Паскаль"> Паскаль</label><br>
+                <label><input type="checkbox" name="lang" value="СИ"> СИ</label><br>
+                <label><input type="checkbox" name="lang" value="Ассемблер"> Ассемблер</label>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="about">Напишите несколько слов о себе:</label><br>
+                <textarea id="about" name="about" rows="4" cols="40"></textarea>
+            </div>
+            <br>
+            <div class="buttons">
+                <button type="submit">Отправка данных</button>
+                <button type="reset">Сброс значений полей</button>
+            </div>
+        </form>
+
+        <div id="result" style="margin-top: 20px; display: none;">
+            <h3>Данные успешно отправлены:</h3>
+            <div id="resultContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
