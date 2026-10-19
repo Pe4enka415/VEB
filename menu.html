@@ -10,5 +10,11 @@
         <a href="tables.html">Таблицы</a>
         <a href="survey.html">Анкета</a>
     </nav>
+    <script>
+        // Этот скрипт говорит главному окну (а не фрейму) открыть нужную страницу
+        function openPage(url) {
+            window.parent.location.href = url;
+        }
+    </script>
 </body>
 </html>
