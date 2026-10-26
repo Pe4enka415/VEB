@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Практическая работа №1 — Список</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <iframe src="menu.html" style="border:none; width:100%; height:55px; display:block;" sandbox="allow-scripts allow-top-navigation allow-same-origin"></iframe>
+
+    <div class="page">
+        <h1>СПИСОК ЛЮДЕЙ</h1>
+
+        <div class="buttons">
+            <button type="button" id="toggleListBtn">Показать список</button>
+        </div>
+
+        <div id="peopleList" style="margin-top: 20px; display: none;">
+            <h3>Список людей:</h3>
+            <ol id="peopleListContent"></ol>
+        </div>
+    </div>
+
+    <script>
+        // Данные списка людей (можно менять по своему усмотрению)
+        const people = [
+            'Арасланов Василий — студент группы 24П-1',
+            'Иванов Иван — студент группы 24П-1',
+            'Петрова Анна — студентка группы 23П-2',
+            'Смирнов Алексей — студент группы 22П-1',
+            'Кузнецова Мария — студентка группы 24П-2',
+            'Соколов Дмитрий — студент группы 23П-1',
+            'Попова Екатерина — студентка группы 22П-2'
+        ];
+
+        const toggleBtn = document.getElementById('toggleListBtn');
+        const listDiv = document.getElementById('peopleList');
+        const listContent = document.getElementById('peopleListContent');
+
+        let isVisible = false;
+
+        toggleBtn.addEventListener('click', function() {
+            if (!isVisible) {
+                // Формируем список
+                listContent.innerHTML = '';
+                for (let i = 0; i < people.length; i++) {
+                    const li = document.createElement('li');
+                    li.textContent = people[i];
+                    listContent.appendChild(li);
+                }
+
+                listDiv.style.display = 'block';
+                toggleBtn.textContent = 'Скрыть список';
+                isVisible = true;
+            } else {
+                listDiv.style.display = 'none';
+                toggleBtn.textContent = 'Показать список';
+                isVisible = false;
+            }
+        });
+    </script>
+</body>
+  </html>
