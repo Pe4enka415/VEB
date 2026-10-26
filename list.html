@@ -12,7 +12,7 @@
         <h1>СПИСОК ЛЮДЕЙ</h1>
 
         <div class="buttons">
-            <button type="button" id="toggleListBtn">Показать список</button>
+            <button type="button" onclick="showList()">Показать список</button>
         </div>
 
         <div id="peopleList" style="margin-top: 20px; display: none;">
@@ -22,7 +22,6 @@
     </div>
 
     <script>
-        // Данные списка людей (можно менять по своему усмотрению)
         const people = [
             'Арасланов Василий — студент группы 24П-1',
             'Иванов Иван — студент группы 24П-1',
@@ -33,31 +32,14 @@
             'Попова Екатерина — студентка группы 22П-2'
         ];
 
-        const toggleBtn = document.getElementById('toggleListBtn');
-        const listDiv = document.getElementById('peopleList');
-        const listContent = document.getElementById('peopleListContent');
-
-        let isVisible = false;
-
-        toggleBtn.addEventListener('click', function() {
-            if (!isVisible) {
-                // Формируем список
-                listContent.innerHTML = '';
-                for (let i = 0; i < people.length; i++) {
-                    const li = document.createElement('li');
-                    li.textContent = people[i];
-                    listContent.appendChild(li);
-                }
-
-                listDiv.style.display = 'block';
-                toggleBtn.textContent = 'Скрыть список';
-                isVisible = true;
-            } else {
-                listDiv.style.display = 'none';
-                toggleBtn.textContent = 'Показать список';
-                isVisible = false;
+        function showList() {
+            let html = '';
+            for (let i = 0; i < people.length; i++) {
+                html += '<li>' + people[i] + '</li>';
             }
-        });
+            document.getElementById('peopleListContent').innerHTML = html;
+            document.getElementById('peopleList').style.display = 'block';
+        }
     </script>
 </body>
-  </html>
+</html>
