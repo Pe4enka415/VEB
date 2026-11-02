@@ -1,0 +1,18 @@
+/* Простые дополнительные стили для формы */
+
+/* Подсветка поля при фокусе */
+input:focus,
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Небольшой отступ сверху для блока результата */
+#result {
+    margin-top: 20px;
+}
+
+/* Чтобы textarea нельзя было растянуть по ширине */
+textarea {
+    resize: vertical;
+}
