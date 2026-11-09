@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цветная сетка</title>
+    <style>
+        /* Стили для всей страницы */
+        body {
+            background-color: #e0e6ed; /* Светло-серый фон, как на экране */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        /* Контейнер для сетки */
+        .grid-container {
+            display: grid;
+            /* 10 колонок одинакового размера */
+            grid-template-columns: repeat(10, 40px); 
+            /* 10 строк одинакового размера */
+            grid-template-rows: repeat(10, 40px);
+            gap: 4px; /* Расстояние между квадратами (создает эффект белых линий) */
+            background-color: #ffffff; /* Белый цвет просветов между квадратами */
+            padding: 4px; /* Белая рамка вокруг всей сетки */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Легкая тень для красоты */
+        }
+
+        /* Общий стиль для всех квадратов */
+        .square {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Цвета */
+        .light-blue {
+            background-color: #00d2e6; /* Голубой цвет */
+        }
+
+        .dark-blue {
+            background-color: #2b1c99; /* Темно-синий цвет */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Сама сетка -->
+    <div class="grid-container">
+        <!-- 1 строка (9 голубых, 1 темно-синий) -->
+        <div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square dark-blue"></div>
+        
+        <!-- 2 строка (8 голубых, 2 темно-синих) -->
+        <div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div>
+        
+        <!-- 3 строка (7 голубых, 3 темно-синих) -->
+        <div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div>
+        
+        <!-- 4 строка (6 голубых, 4 темно-синих) -->
+        <div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div>
+        
+        <!-- 5 строка (5 голубых, 5 темно-синих) -->
+        <div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div>
+        
+        <!-- 6 строка (4 голубых, 6 темно-синих) -->
+        <div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div>
+        
+        <!-- 7 строка (3 голубых, 7 темно-синих) -->
+        <div class="square light-blue"></div><div class="square light-blue"></div><div class="square light-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div>
+        
+        <!-- 8 строка (2 голубых, 8 темно-синих) -->
+        <div class="square light-blue"></div><div class="square light-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div>
+        
+        <!-- 9 строка (1 голубой, 9 темно-синих) -->
+        <div class="square light-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div>
+        
+        <!-- 10 строка (0 голубых, 10 темно-синих) -->
+        <div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div><div class="square dark-blue"></div>
+    </div>
+
+</body>
+</html>
