@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Цветная сетка</title>
+</head>
 <body>
     <table>
         <script>
-            int n = 10;
-            for (int i =0;i<n;i++)
-            {
-                for (int j =0;j<n;j++)
-                {
-                    if (i+j>=n-1) document.write(<tr(background: "red")>)
-                    else document.write(<tr(background: "blue")>);
+            let n = 10;
+            for (let i = 0; i < n; i++) {
+                document.write("<tr>");
+                for (let j = 0; j < n; j++) {
+                    if (i + j >= n - 1)
+                        document.write('<td style="background: red; width: 30px; height: 30px;"></td>');
+                    else
+                        document.write('<td style="background: blue; width: 30px; height: 30px;"></td>');
                 }
+                document.write("</tr>");
             }
         </script>
     </table>
-
 </body>
 </html>
