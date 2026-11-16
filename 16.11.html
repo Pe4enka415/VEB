@@ -39,5 +39,21 @@
         </li>
       <li>Клавиатура</li><li>Мышь</li>
     </ol>
+    <p id="out">
+        
+    </p>
+
+    <script>
+        let a = prompt("Введите число");
+        for (let i = 1; i<=a;i++)
+        {
+        if (a / i == 1 && a / i == a)
+            document.write("<p>Простое</p>");
+        else if (a % i == 0)
+        {
+            document.write('<p>&{i}</p>');
+        }
+        }
+    </script>
 </body>
 </html>
