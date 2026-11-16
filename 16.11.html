@@ -45,9 +45,9 @@
 
     <script>
         let a = prompt("Введите число");
-        for (let i = 1; i<=a;i++)
+        for (let i = 2; i<=Math.sqrt(a);i++)
         {
-        if (a / i == a && a / i == 1)
+        if (a % i == 0)
             document.write('<p>Простое</p>');
         else if (a % i == 0)
         {
