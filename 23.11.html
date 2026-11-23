@@ -4,39 +4,55 @@
     <meta charset="UTF-8>
       <title>Круглый div</title>
       <style>
-      .circle_red
+      .circle_red, .circle_yellow, .circle_green
       {
         width: 100px;
         height: 100px;
         border-radius: 50%;
         position: absolute;
-        background: "red";
+        background: #333;
+        left: 50px;
+        transition: background 0.2s;
       }
-      .circle_yellow
-      {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        position: absolute;
-        background: "yellow";
-      }
-      .circle_green
-      {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        position: absolute;
-        background: "green";
-      }
+    .circle_red{top: 50px;}
+    .circle_yellow{top: 160px;}
+    .circle_green{top: 270px;}
       </style>
   </head>
   <body>
     <iframe src="menu.html" style="border:none; width:100%; height:55px; display:block;" sandbox="allow-scripts allow-top-navigation allow-same-origin"></iframe>
-    <div class="circle_red" id="circle_red" style="top: 200px">
+    <div class="circle_red" id="red">
     </div>
-    <div class="circle_yellow" id="circle_yellow" style="top: 200px">
+    <div class="circle_yellow" id="yellow">
     </div>
-    <div class="circle_green" id="circle_green" style="top: 200px">
+    <div class="circle_green" id="green">
     </div>
+    <script>
+      const red = document.gerElementById('red');
+      const yellow = document.gerElementById('yellow');
+      const green = document.gerElementById('green');
+
+      function turnOffAll()
+      {
+        red.style.background = '#333';
+        yellow.style.background = '#333';
+        green.style.background = '#333';
+      }
+
+      function trafficLight()
+      {
+        turnOffAll();
+        red.style.background = 'red';
+        Settimeout()=>{
+          turnOffAll();
+          yellow.style.background = 'yellow';
+          Settimeout()=>{
+            turnOffAll();
+            green.style.background = 'green';
+            Settimeout(trafficLigth, 2000);
+          }, 1000);
+        }, 2000);
+      }
+    </script>
   </body>
 </html>
