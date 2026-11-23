@@ -42,14 +42,16 @@
       function trafficLight()
       {
         turnOffAll();
-        red.style.background = 'red';
-        Settimeout()=>{
+        red.style.backgroundColor = 'red';
+        Settimeout(function() {
           turnOffAll();
-          yellow.style.background = 'yellow';
-          Settimeout()=>{
+          yellow.style.backgroundColor = 'yellow';
+          Settimeout(function() {
             turnOffAll();
-            green.style.background = 'green';
-            Settimeout(trafficLigth, 2000);
+            green.style.backgroundColor = 'green';
+            Settimeout(function() {
+              trafficLigth();
+            }, 2000);
           }, 1000);
         }, 2000);
       }
